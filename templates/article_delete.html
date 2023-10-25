@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center; margin-top:150px;">
+    <h2>Postni o'chirish</h2>
+    <form action="" method="post">{% csrf_token %}
+        <p>"{{ article.title }}" nomli maqolani o'chirishni istaysizmi?</p>
+        <button type="submit" class="btn btn-danger ml-2">Xa</button>
+    </form>
+</div>
+{% endblock content %}

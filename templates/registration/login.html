@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<div style="text-align:center; margin-top:250px;">
+<h2>Saytga kirish</h2>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Kirish</button> <br> <br>
+        <a class="btn btn-outline-danger" href="{% url 'password_reset' %}" role="button">Kalit so'zni alishtirish</a>
+
+    </form>
+</div>
+
+
+{% endblock content %}

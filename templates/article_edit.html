@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align:center; margin-top:150px;">
+    <h2>Tahrirlash</h2>
+    <form action="{% url 'article_edit' pk=article.pk %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-info ml-2">Saqlash</button>
+    </form>
+</div>
+{% endblock content %}
